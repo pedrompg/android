@@ -21,3 +21,15 @@ local.properties
 
 #Mac specific files
 .DS_Store
+
+*.iml
+*.iws
+*.ipr
+.idea/
+.gradle/
+local.properties
+
+*/build/
+
+*~
+*.swp
