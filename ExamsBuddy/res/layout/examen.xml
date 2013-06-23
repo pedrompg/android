@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="10dp"
+    >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/examen_nom"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:singleLine="true"/>
+            
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/examen_nota"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"  />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pes en %"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/examen_pes"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" 
+            android:inputType="phone"
+            android:hint="En percentatge (Ex: 30)"/>
+        
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dia  "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/examen_dia"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
+        
+     <LinearLayout android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+	    <Button android:id="@+id/examen_save" 
+	        android:layout_width="0.0dip"
+	        android:layout_height="fill_parent" 
+	        android:text="Save"
+	        android:layout_weight="1.0" />
+	    
+   </LinearLayout>
+        
+</LinearLayout>

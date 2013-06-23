@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Examsbuddy">ExamsBuddy</string>
+    <string name="Control_your_grades">Control your grades</string>
+    <string name="Subjects">Subjects</string>
+    <string name="To_do">To do</string>
+    <string name="Help">Help</string>
+    <string name="no_subjects">Currently you have no subjects created</string>
+    <string name="no_notes">Currently you have no notes created</string>
+	<string name="Average">Average</string>
+	<string name="erase_subject">Erase the selected subject</string>
+	<string name="Exam">Exam</string>
+	<string name="existing_subject">There is already a subject with the name :</string>
+	<string name="incomplete_subject_form">All fields of the form must be filled</string>
+	<string name="Grade">Grade</string>
+	<string name="Weight">Weight</string>
+	<string name="Your_grade">Your grade:</string>
+	<string name="incorrect_weight">The current weight do not add to a 100%, please check if there was no mistake entering the data</string>
+</resources>

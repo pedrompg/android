@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.examsbuddy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/Examsbuddy" >
+        <activity 
+            android:label="@string/Examsbuddy"
+            android:name=".StartScreen" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:label="@string/Examsbuddy"
+            android:name=".ExamsBuddy" >
+        </activity>
+        <activity 
+            android:screenOrientation="portrait"
+            android:label="Assignatura"
+            android:name=".Subject" >
+        </activity>
+        <activity 
+            android:label="Afegir assignatura"
+            android:screenOrientation="portrait"
+            android:name=".AddSubject" 
+            android:theme="@android:style/Theme.Dialog">
+          
+        </activity>
+        <activity 
+            android:label="Editar Examen"
+            android:name=".Exam" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@android:style/Theme.Dialog">
+          
+        </activity>
+        <activity 
+            android:label="Ajuda"
+            android:screenOrientation="portrait"
+            android:name=".Help" 
+            android:windowSoftInputMode="adjustPan">
+          
+        </activity>
+        <activity 
+            android:label="Notes"
+            android:name=".Notes_list" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+          
+        </activity>
+        <activity 
+            android:label="Editar nota"
+            android:name=".EditNota" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustPan">
+          
+        </activity>
+        <activity 
+            android:screenOrientation="portrait"
+            android:label="Nota"
+            android:name=".Nota" 
+            android:windowSoftInputMode="adjustPan">
+          
+        </activity>
+        
+    </application>
+
+</manifest>
