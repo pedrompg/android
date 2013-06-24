@@ -2,7 +2,6 @@ package com.androidbasicsstarter;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -46,7 +45,6 @@ public class MultiTouchTest extends Activity implements View.OnTouchListener {
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         int action = motionEvent.getActionMasked();
-        int pointerIndex = motionEvent.getActionIndex();
         int pointerCount = motionEvent.getPointerCount();
         for (int i = 0; i < pointerCount; i++) {
             int pointerId = motionEvent.getPointerId(i);
