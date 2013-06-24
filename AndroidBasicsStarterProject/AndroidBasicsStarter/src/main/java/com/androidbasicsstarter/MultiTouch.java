@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-public class MultiTouchTest extends Activity implements View.OnTouchListener {
+public class MultiTouch extends Activity implements View.OnTouchListener {
     StringBuilder builder = new StringBuilder();
     TextView textView;
     float[] x = new float[10];

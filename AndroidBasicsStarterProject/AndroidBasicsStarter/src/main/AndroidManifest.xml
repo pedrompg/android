@@ -27,21 +27,21 @@
 
         <activity
             android:label="Life Cycle Test"
-            android:name=".LifeCycleTest"
+            android:name=".LifeCycle"
             android:screenOrientation="portrait"
             android:configChanges="keyboard|keyboardHidden|orientation">
         </activity>
 
         <activity
                 android:label="Single Touch Test"
-                android:name=".SingleTouchTest"
+                android:name=".SingleTouch"
                 android:screenOrientation="portrait"
                 android:configChanges="keyboard|keyboardHidden|orientation">
         </activity>
 
         <activity
                 android:label="Multi Touch Test"
-                android:name=".MultiTouchTest"
+                android:name=".MultiTouch"
                 android:screenOrientation="portrait"
                 android:configChanges="keyboard|keyboardHidden|orientation">
         </activity>

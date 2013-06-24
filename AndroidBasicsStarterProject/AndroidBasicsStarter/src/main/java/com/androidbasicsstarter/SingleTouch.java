@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-public class SingleTouchTest extends Activity implements View.OnTouchListener {
+public class SingleTouch extends Activity implements View.OnTouchListener {
     StringBuilder builder = new StringBuilder();
     TextView textView;
 
