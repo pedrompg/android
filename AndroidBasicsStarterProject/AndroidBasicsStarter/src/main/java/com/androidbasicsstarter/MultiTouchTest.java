@@ -48,30 +48,24 @@ public class MultiTouchTest extends Activity implements View.OnTouchListener {
         int action = motionEvent.getActionMasked();
         int pointerIndex = motionEvent.getActionIndex();
         int pointerCount = motionEvent.getPointerCount();
-        for (int i = 0; i < 10; i++) {
-            if(i >= pointerCount) {
-                touched[i] = false;
-                id[i] = -1;
-                continue;
-            }
-            if((motionEvent.getAction() != MotionEvent.ACTION_DOWN) && (i != pointerIndex)) {
-                continue;
-            }
+        for (int i = 0; i < pointerCount; i++) {
             int pointerId = motionEvent.getPointerId(i);
+            int posX = (int) motionEvent.getX(i);
+            int posY = (int) motionEvent.getY(i);
 
             switch (action) {
                 case MotionEvent.ACTION_DOWN:
                 case MotionEvent.ACTION_POINTER_DOWN:
                     touched[i] = true;
                     id[i] = pointerId;
-                    x[i] = (int) motionEvent.getX(pointerIndex);
-                    y[i] = (int) motionEvent.getY(pointerIndex);
+                    x[i] = posX;
+                    y[i] = posY;
                     break;
                 case MotionEvent.ACTION_MOVE:
                     touched[i] = true;
                     id[i] = pointerId;
-                    x[i] = (int) motionEvent.getX(pointerIndex);
-                    y[i] = (int) motionEvent.getY(pointerIndex);
+                    x[i] = posX;
+                    y[i] = posY;
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_POINTER_UP:
@@ -79,8 +73,8 @@ public class MultiTouchTest extends Activity implements View.OnTouchListener {
                 case MotionEvent.ACTION_CANCEL:
                     touched[i] = false;
                     id[i] = -1;
-                    x[i] = (int) motionEvent.getX(pointerIndex);
-                    y[i] = (int) motionEvent.getY(pointerIndex);
+                    x[i] = posX;
+                    y[i] = posY;
                     break;
                 default:
                     break;
