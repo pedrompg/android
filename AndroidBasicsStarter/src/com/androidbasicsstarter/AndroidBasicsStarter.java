@@ -25,7 +25,7 @@ public class AndroidBasicsStarter extends ListActivity {
         super.onListItemClick(list, view, position, id);
         String testName = this.tests[position];
         try {
-            Class c = Class.forName("com.androidbasicsstarter." + testName);
+            Class<?> c = Class.forName("com.androidbasicsstarter." + testName);
             Intent intent = new Intent(this,c);
             startActivity(intent);
         } catch (ClassNotFoundException e) {
