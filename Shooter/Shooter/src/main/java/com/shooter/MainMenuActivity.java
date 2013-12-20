@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class MainMenuActivity extends Activity {
 
@@ -11,6 +13,34 @@ public class MainMenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        final GameEngine gameEngine = new GameEngine();
+
+        ImageButton startButton = (ImageButton) findViewById(R.id.start_button);
+        ImageButton exitButton = (ImageButton) findViewById(R.id.exit_button);
+
+        startButton.getBackground().setAlpha(gameEngine.MENU_BUTTON_ALPHA);
+        startButton.setHapticFeedbackEnabled(gameEngine.HAPTIC_BUTTON_FEEDBACK);
+
+        exitButton.getBackground().setAlpha(gameEngine.MENU_BUTTON_ALPHA);
+        exitButton.setHapticFeedbackEnabled(gameEngine.HAPTIC_BUTTON_FEEDBACK);
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean clean = gameEngine.onExit(v);
+                if(clean) {
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                }
+            }
+        });
     }
 
 
