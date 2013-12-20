@@ -1,6 +1,8 @@
 package com.shooter;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,14 +18,26 @@ public class MainMenuActivity extends Activity {
 
         final GameEngine gameEngine = new GameEngine();
 
+        GameEngine.musicThread = new Thread() {
+            @Override
+            public void run() {
+                Context context = getApplicationContext();
+                Intent bgMusic = new Intent(context, Music.class);
+                startService(bgMusic);
+                GameEngine.context = context;
+            }
+        };
+
+        GameEngine.musicThread.start();
+
         ImageButton startButton = (ImageButton) findViewById(R.id.start_button);
         ImageButton exitButton = (ImageButton) findViewById(R.id.exit_button);
 
-        startButton.getBackground().setAlpha(gameEngine.MENU_BUTTON_ALPHA);
-        startButton.setHapticFeedbackEnabled(gameEngine.HAPTIC_BUTTON_FEEDBACK);
+        startButton.getBackground().setAlpha(GameEngine.MENU_BUTTON_ALPHA);
+        startButton.setHapticFeedbackEnabled(GameEngine.HAPTIC_BUTTON_FEEDBACK);
 
-        exitButton.getBackground().setAlpha(gameEngine.MENU_BUTTON_ALPHA);
-        exitButton.setHapticFeedbackEnabled(gameEngine.HAPTIC_BUTTON_FEEDBACK);
+        exitButton.getBackground().setAlpha(GameEngine.MENU_BUTTON_ALPHA);
+        exitButton.setHapticFeedbackEnabled(GameEngine.HAPTIC_BUTTON_FEEDBACK);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +51,7 @@ public class MainMenuActivity extends Activity {
             public void onClick(View v) {
                 boolean clean = gameEngine.onExit(v);
                 if(clean) {
-                    android.os.Process.killProcess(android.os.Process.myPid());
+                    finish();
                 }
             }
         });
