@@ -12,6 +12,12 @@ public class GameEngine {
     public static final int R_VOLUME = 100;
     public static final int L_VOLUME = 100;
     public static final boolean LOOP_BACKGROUND_MUSIC = true;
+    public static final int GAME_THREAD_FPS_SLEEP = (1000/60);
+    public static final int BACKGROUND_LAYER_ONE = R.drawable.backgroundstars;
+    public static float SCROLL_BACKGROUND_1 = .002f;
+    public static final int BACKGROUND_LAYER_TWO = R.drawable.debris;
+    public static float SCROLL_BACKGROUND_2 = .007f;
+
     public static Context context;
     public static Thread musicThread;
 

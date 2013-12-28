@@ -18,7 +18,6 @@ final GameEngine gameEngine = new GameEngine();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-
         GameEngine.musicThread = new Thread() {
             @Override
             public void run() {
@@ -43,7 +42,8 @@ final GameEngine gameEngine = new GameEngine();
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getApplicationContext(), Game.class);
+                MainMenuActivity.this.startActivity(i);
             }
         });
 
@@ -61,15 +61,11 @@ final GameEngine gameEngine = new GameEngine();
     @Override
     protected void onPause() {
         super.onPause();
-
-        gameEngine.onExit();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-
-        gameEngine.onExit();
     }
 
     @Override
