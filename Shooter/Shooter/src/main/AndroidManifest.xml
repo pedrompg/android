@@ -26,7 +26,13 @@
             android:name="com.shooter.MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
         </activity>
-        <service android:name=".Music"/>
+
+        <service android:name="com.shooter.Music" />
+
+        <activity
+            android:name="com.shooter.Game"
+            android:label="@string/title_activity_game" >
+        </activity>
     </application>
 
 </manifest>

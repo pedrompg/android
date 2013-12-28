@@ -11,12 +11,13 @@ import android.widget.ImageButton;
 
 public class MainMenuActivity extends Activity {
 
+final GameEngine gameEngine = new GameEngine();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        final GameEngine gameEngine = new GameEngine();
 
         GameEngine.musicThread = new Thread() {
             @Override
@@ -57,6 +58,19 @@ public class MainMenuActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        gameEngine.onExit();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        gameEngine.onExit();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

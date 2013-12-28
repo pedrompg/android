@@ -24,4 +24,14 @@ public class GameEngine {
             return false;
         }
     }
+
+    public boolean onExit() {
+        try {
+            Intent bgMusic = new Intent(context, Music.class);
+            context.stopService(bgMusic);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
