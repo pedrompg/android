@@ -30,3 +30,5 @@ local.properties
 .buildpath
 
 supportFiles/*
+
+android-sdk-macosx/*
